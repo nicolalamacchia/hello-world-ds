@@ -13,9 +13,11 @@
 int main()
 {
     consoleDemoInit();
-    fprintf(stderr, "\x1b[12;10HHello World");
 
-    // Prevent Nintendo DS doesn't reboot upon program completion.
+    // Move the cursor to row 11 and column 9 and then print "Hello World"
+    printf("\x1b[12;10HHello World");
+
+    // Prevent Nintendo DS doesn't reboot upon program completion
     for (;;)
         ;
 
